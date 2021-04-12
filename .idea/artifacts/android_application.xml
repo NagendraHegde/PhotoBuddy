@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact name="android application">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/android_application</output-path>
+    <root id="root" />
+  </artifact>
+</component>

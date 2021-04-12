@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PhotoBuddy</string>
+    <string name="welcome_text">Hello from PhotoBuddy</string>
+    <string name="backup_server_url">Backup Server Url:</string>
+    <string name="enter_url_here">enter url here</string>
+    <string name="server_response_here">Server response here:</string>
+    <string name="search_bar_for_searching_the_server">search bar for searching the server</string>
+    <string name="cam_icon">cam icon</string>
+</resources>
