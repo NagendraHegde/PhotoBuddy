@@ -11,15 +11,15 @@
             android:layout_height="67dp" app:srcCompat="@drawable/camera_icon" android:id="@+id/cam_icon"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="16dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="40dp" app:layout_constraintBottom_toTopOf="@+id/serverUrl"
-            app:layout_constraintVertical_bias="0.1" android:contentDescription="@string/cam_icon"/>
+            android:layout_marginStart="36dp" app:layout_constraintBottom_toTopOf="@+id/serverUrl"
+            app:layout_constraintVertical_bias="0.16" android:contentDescription="@string/cam_icon"/>
     <TextView
             android:layout_width="246dp"
             android:layout_height="67dp" android:id="@+id/outputText"
             android:text="@string/app_name" android:fontFamily="@font/comfortaa"
             android:textSize="36sp" android:typeface="normal" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="24dp" app:layout_constraintStart_toEndOf="@+id/cam_icon"
-            android:layout_marginStart="24dp"/>
+            android:layout_marginTop="32dp" app:layout_constraintStart_toEndOf="@+id/cam_icon"
+            android:layout_marginStart="8dp"/>
     <TextView
             android:text="@string/backup_server_url"
             android:layout_width="184dp"
@@ -27,7 +27,7 @@
             android:fontFamily="@font/comfortaa" android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/cam_icon" android:layout_marginTop="52dp"
             app:layout_constraintBottom_toTopOf="@+id/serverOutput" app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="36dp"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,15 +36,15 @@
             android:ems="10"
             android:id="@+id/serverUrl"
             app:layout_constraintTop_toBottomOf="@+id/outputText"
-            android:layout_marginTop="88dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="60dp" android:autofillHints=""/>
+            android:layout_marginTop="84dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="36dp" android:autofillHints=""/>
     <TextView
             android:text="@string/server_response_here"
             android:layout_width="467dp"
             android:layout_height="377dp" android:id="@+id/serverOutput"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintTop_toBottomOf="@+id/serverUrl" android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.312"
+            app:layout_constraintTop_toBottomOf="@+id/serverUrl" android:layout_marginTop="36dp"
             android:layout_marginStart="16dp" android:layout_marginEnd="55dp"/>
     <ImageView
             android:layout_width="47dp"
@@ -53,6 +53,6 @@
             app:layout_constraintBottom_toBottomOf="@+id/serverUrl"
             app:layout_constraintStart_toEndOf="@+id/serverUrl" android:layout_marginStart="20dp"
             app:layout_constraintVertical_bias="1.0" android:layout_marginEnd="57dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.213"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
             android:contentDescription="@string/search_bar_for_searching_the_server"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

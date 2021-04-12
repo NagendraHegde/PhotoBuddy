@@ -9,19 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import static java.lang.String.format;
 
 public class PhotoBuddyMainActivity extends AppCompatActivity {
-    private TextView message;
+    private ImageView searchButton;
     private int counter = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        message = findViewById(R.id.serverUrl);
-        ImageView droid = findViewById(R.id.cam_icon);
+        searchButton = findViewById(R.id.serverSearchButton);
 
         //Define and attach click listener
-        droid.setOnClickListener(new View.OnClickListener() {
+        searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tapDroid();
@@ -50,6 +50,10 @@ public class PhotoBuddyMainActivity extends AppCompatActivity {
 
         String output = "";
 
-        message.setText(format("Json response from API: %s", output));
+
+
+//        message.setText(format("Json response from API: %s", output));
     }
+
+
 }
