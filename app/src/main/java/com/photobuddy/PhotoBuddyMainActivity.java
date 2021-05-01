@@ -18,56 +18,22 @@ import java.util.LinkedList;
 import static java.lang.String.format;
 
 public class PhotoBuddyMainActivity extends AppCompatActivity {
-    private ImageView searchButton;
-    private int counter = 0;
 
-
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        searchButton = findViewById(R.id.serverSearchButton);
-
-        //Define and attach click listener
-        searchButton.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
-            @Override
-            public void onClick(View v) {
-                new Thread(() -> tapDroid()).start();
-            }
-        });
+        ImageView searchButton = findViewById(R.id.serverSearchButton);
+        searchButton.setOnClickListener(v -> new Thread(this::tapDroid).start());
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void tapDroid() {
-//        counter++;
-//        String countAsText;
-//        /*
-//         * In real applications you should not write switch like the one below.
-//         * Use resource of type "Quantity strings (plurals)" instead.
-//         * See https://developer.android.com/guide/topics/resources/string-resource#Plurals
-//         */
-//        switch (counter) {
-//            case 1:
-//                countAsText = "once";
-//                break;
-//            case 2:
-//                countAsText = "twice";
-//                break;
-//            default:
-//                countAsText = String.format("%d times", counter);
-//        }
-
         String serverUrl = ((EditText) findViewById(R.id.serverUrl)).getText().toString();
         BackupSystemClient client = new BackupSystemRestClient(serverUrl);
         TextView outputDisplay = findViewById(R.id.serverOutput);
-        outputDisplay.setText(client.getFiles().orElse(new LinkedList<FileResource>()).toString());
-
-
-
-
-//        message.setText(format("Json response from API: %s", output));
+        outputDisplay.setText(client.getFiles().orElse(new LinkedList<>()).toString());
     }
 
 
