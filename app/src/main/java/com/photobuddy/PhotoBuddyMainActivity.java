@@ -1,5 +1,6 @@
 package com.photobuddy;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +35,13 @@ public class PhotoBuddyMainActivity extends AppCompatActivity {
         BackupSystemClient client = new BackupSystemRestClient(serverUrl);
         TextView outputDisplay = findViewById(R.id.serverOutput);
         outputDisplay.setText(client.getFiles().orElse(new LinkedList<>()).toString());
+        navigateToUpload(serverUrl);
     }
 
 
+    private void navigateToUpload(String serverUrl){
+        Intent intent = new Intent(this, UploadActivity.class);
+        intent.putExtra("serverUrl", serverUrl);
+        startActivity(intent);
+    }
 }

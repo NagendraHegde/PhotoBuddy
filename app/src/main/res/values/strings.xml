@@ -6,4 +6,5 @@
     <string name="server_response_here">Server response here:</string>
     <string name="search_bar_for_searching_the_server">search bar for searching the server</string>
     <string name="cam_icon">cam icon</string>
+    <string name="click_to_upload_file">Click To Upload File</string>
 </resources>
